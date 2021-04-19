@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HSO_D_Block_AR.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: aa05094ea4bf94b5d98cd7264573e323, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a8fea57548d3947a2abe7e3622359c90, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ca35e0b95bb6e4ae39532adb46539e0a, type: 2}
