@@ -132,7 +132,7 @@
 74-->[:unityLibrary] /Users/ucalren/Desktop/IT Projekt/_Rep/HSO_D_Block_AR/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:60:9-62:68
 75            android:name="unity.build-id"
 75-->[:unityLibrary] /Users/ucalren/Desktop/IT Projekt/_Rep/HSO_D_Block_AR/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:61:13-42
-76            android:value="24a55211-3fe0-40d9-85c9-1d33d5e0a7d6" />
+76            android:value="59b1d08b-7216-40c8-b9df-a73ce1794dd7" />
 76-->[:unityLibrary] /Users/ucalren/Desktop/IT Projekt/_Rep/HSO_D_Block_AR/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:62:13-65
 77        <meta-data
 77-->[:unityLibrary] /Users/ucalren/Desktop/IT Projekt/_Rep/HSO_D_Block_AR/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:63:9-65:36

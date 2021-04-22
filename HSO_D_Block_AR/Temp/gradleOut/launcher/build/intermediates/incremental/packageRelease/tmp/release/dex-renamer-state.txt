@@ -1,4 +1,4 @@
-#Mon Apr 19 21:58:40 CEST 2021
+#Thu Apr 22 12:25:30 CEST 2021
 base.0=/Users/ucalren/Desktop/IT Projekt/_Rep/HSO_D_Block_AR/Temp/gradleOut/launcher/build/intermediates/dex/release/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
