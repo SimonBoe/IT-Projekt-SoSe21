@@ -176,3 +176,59 @@ System memory in use after: 115.5 MB.
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2022.
 Total: 1.942087 ms (FindLiveObjects: 0.173487 ms CreateObjectMapping: 0.049414 ms MarkObjects: 1.638480 ms  DeleteObjects: 0.079657 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 10598.187169 seconds.
+  path: Assets/Lean
+  artifactKey: Guid(356f5eac285794e86b48230faa0c2f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean using Guid(356f5eac285794e86b48230faa0c2f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682cefb757f8ab21c1712a0e40a0ffcb') in 0.000833 seconds
+  Import took 0.003869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000561 seconds.
+  path: Assets/Lean
+  artifactKey: Guid(356f5eac285794e86b48230faa0c2f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean using Guid(356f5eac285794e86b48230faa0c2f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682cefb757f8ab21c1712a0e40a0ffcb') in 0.000679 seconds
+  Import took 0.003241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.020759 seconds.
+  path: Assets/Lean/Common
+  artifactKey: Guid(8ce410272d5666e44812e63d103bfaa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common using Guid(8ce410272d5666e44812e63d103bfaa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea9fcfa8aa4f94804f4595c51b51f5b') in 0.000869 seconds
+  Import took 0.004012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Lean/Common
+  artifactKey: Guid(8ce410272d5666e44812e63d103bfaa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common using Guid(8ce410272d5666e44812e63d103bfaa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea9fcfa8aa4f94804f4595c51b51f5b') in 0.000842 seconds
+  Import took 0.003703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.049510 seconds.
+  path: Assets/Lean/Common/GUIDE.asset
+  artifactKey: Guid(fee5243b4c3305f4393657b324b1a5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common/GUIDE.asset using Guid(fee5243b4c3305f4393657b324b1a5c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f94b3be244bebc8c8c2347b55697ee') in 0.031060 seconds
+  Import took 0.034550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Lean/Common/LeanCommon.asmdef
+  artifactKey: Guid(82c7e6eac44d7e048b22ad98800dcfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common/LeanCommon.asmdef using Guid(82c7e6eac44d7e048b22ad98800dcfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77530dfa01f936359a34d90a5eaa5790') in 0.030453 seconds
+  Import took 0.033032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.415255 seconds.
+  path: Assets/Lean/READ ME.txt
+  artifactKey: Guid(f6ff8a5c80a68bc458c5d91349bf10ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/READ ME.txt using Guid(f6ff8a5c80a68bc458c5d91349bf10ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f72018936912e0d8af7125e1f7278d') in 0.496871 seconds
+  Import took 0.499688 seconds .
+
