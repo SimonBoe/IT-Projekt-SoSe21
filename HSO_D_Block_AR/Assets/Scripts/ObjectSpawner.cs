@@ -8,11 +8,15 @@ public class ObjectSpawner : MonoBehaviour
     // in editor select the prefab which is instatiated by tapping the screen
     public GameObject objectToSpawn;
     private PlacementIndicator placementIndicator;
+    private PhysicsRaycastManager PhysicsRaycastManager;
 
     // Start is called before the first frame update
     void Start()
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
+        PhysicsRaycastManager = FindObjectOfType<PhysicsRaycastManager>();
+        PhysicsRaycastManager.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -25,15 +29,30 @@ public class ObjectSpawner : MonoBehaviour
 
             //instantiate object, if instance of object already exists, destroy object before instantiate new object
 
-            if (GameObject.FindGameObjectWithTag("objectToSpawn"))
+            /*if (GameObject.FindGameObjectWithTag("objectToSpawn"))
             {
                 Destroy(GameObject.FindGameObjectWithTag("objectToSpawn"));
                 GameObject spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
+                PhysicsRaycastManager.gameObject.SetActive(true);
             }
             else {
                 GameObject spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
+                PhysicsRaycastManager.gameObject.SetActive(true);
+            }*/
+
+            //instantiate object, if instance of object already exists, destroy object before instantiate new object
+
+            if (!GameObject.FindGameObjectWithTag("objectToSpawn"))
+            {
+                GameObject spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
+                GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
+                PhysicsRaycastManager.gameObject.SetActive(true);
+            }
+            else
+            {
+                return;
             }
         }
     }
