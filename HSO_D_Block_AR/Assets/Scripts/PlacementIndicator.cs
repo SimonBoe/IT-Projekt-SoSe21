@@ -27,15 +27,17 @@ public class PlacementIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("Raycast works");
         // shoot a raycast from center of the screen
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        rayManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.Planes);
+        rayManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.All);
 
         // if you hit an AR plane, update the position and rotation
-        if (hits.Count > 0)
+        if (hits.Count > 0 && visualIndicator.activeInHierarchy)
         {
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
+
 
             /*if (!visualIndicator.activeInHierarchy)
                 visualIndicator.SetActive(true);*/
