@@ -24,6 +24,8 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARRaycastManager
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
+    Unity.XR.ARKit.Editor.dll:
+    - UnityEditor.XR.ARKit.ARKitSettings
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -84,17 +86,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 1728}
+      Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 2284}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 2364}
+      Script: {instanceID: 2362}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2472}
     - Class: 114
-      Script: {instanceID: 2550}
+      Script: {instanceID: 2548}
+    - Class: 114
+      Script: {instanceID: 2646}
     - Class: 114
       Script: {instanceID: 2810}
     - Class: 114
@@ -119,8 +123,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4300}
     - Class: 114
       Script: {instanceID: 4392}
-    - Class: 114
-      Script: {instanceID: 23738}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -452,6 +454,12 @@ ScriptsOnlyBuild:
     assemblyName: LeanCommon.dll
     namespaceName: Lean.Common
     className: LeanSelect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
   - hash:
       serializedVersion: 2
       Hash: 0c5108545fb925730d4d5887ebcdd20c
@@ -1070,13 +1078,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UIManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
-  playerPath: /Users/ucalren/Desktop/IT Projekt/_builds/20210426_app.apk
+  playerPath: /Users/matthias/Desktop/build.apk

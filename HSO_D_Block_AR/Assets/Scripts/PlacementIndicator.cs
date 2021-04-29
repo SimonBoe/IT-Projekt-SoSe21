@@ -10,8 +10,6 @@ public class PlacementIndicator : MonoBehaviour
     private ARRaycastManager rayManager;
     private GameObject visualIndicator;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
