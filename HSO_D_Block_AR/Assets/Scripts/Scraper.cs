@@ -20,36 +20,8 @@ public class Scraper : MonoBehaviour
     void Start()
     {
         StartCoroutine(GetText());
-        // string read_string = ReadString_1();
-        string read_string = ReadString_2();
         // findCourseLink(read_string, "3B8D64DB-2846-48D0-AB9E-782225E7B613"); // z.B. MuK1-3a
         // findCourseLink(read_string, "MuK1-3a"); // z.B. MuK1-3a
-        string text = extractDayAndPosition(extractTimeTable(read_string), "Mi", "1");
-        setLessonInfo(text);
-    }
-
-    string ReadString_1()
-    {
-        string path = "hso_test.txt";
-
-        // Read the text from directly from the txt file
-        StreamReader reader = new StreamReader(path);
-        // Debug.Log(reader.ReadToEnd());
-        scraping_output = reader.ReadToEnd();
-        reader.Close();
-        return scraping_output;
-    }
-
-    string ReadString_2()
-    {
-        string path = "hso_test_2.txt";
-
-        // Read the text from directly from the txt file
-        StreamReader reader = new StreamReader(path);
-        // Debug.Log(reader.ReadToEnd());
-        scraping_output = reader.ReadToEnd();
-        reader.Close();
-        return scraping_output;
     }
 
     string findCourseLink(string scrapedText, string courseName)
