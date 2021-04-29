@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ObjectSpawner
     - PhysicsRaycastManager
     - PlacementIndicator
+    - Scraper
     - UIManager
     LeanTouch.dll:
     - Lean.Touch.LeanPinchScale
@@ -24,8 +25,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARRaycastManager
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
-    Unity.XR.ARKit.Editor.dll:
-    - UnityEditor.XR.ARKit.ARKitSettings
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -88,41 +87,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2362}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2548}
+      Script: {instanceID: 2556}
     - Class: 114
-      Script: {instanceID: 2646}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3162}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3526}
+      Script: {instanceID: 3536}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3584}
     - Class: 114
-      Script: {instanceID: 3702}
+      Script: {instanceID: 3714}
     - Class: 114
-      Script: {instanceID: 3810}
+      Script: {instanceID: 3822}
     - Class: 114
-      Script: {instanceID: 3852}
+      Script: {instanceID: 3866}
     - Class: 114
-      Script: {instanceID: 4300}
+      Script: {instanceID: 4314}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 4406}
+    - Class: 114
+      Script: {instanceID: 23076}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1078,6 +1079,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 04fad1ddbabdb7f42c209581676e925e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scraper
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
