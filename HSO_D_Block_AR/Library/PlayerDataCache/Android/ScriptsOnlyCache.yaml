@@ -87,43 +87,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2178}
     - Class: 114
-      Script: {instanceID: 2368}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2370}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2556}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 2820}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 3010}
     - Class: 114
-      Script: {instanceID: 3174}
+      Script: {instanceID: 3172}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 3536}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3538}
     - Class: 114
-      Script: {instanceID: 3714}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 3822}
+      Script: {instanceID: 3716}
     - Class: 114
-      Script: {instanceID: 3866}
+      Script: {instanceID: 3824}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 3868}
     - Class: 114
-      Script: {instanceID: 4406}
+      Script: {instanceID: 4316}
     - Class: 114
-      Script: {instanceID: 23076}
+      Script: {instanceID: 4408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -323,6 +323,12 @@ ScriptsOnlyBuild:
     assemblyName: LeanTouch.dll
     namespaceName: Lean.Touch
     className: LeanSelectByFinger
+  - hash:
+      serializedVersion: 2
+      Hash: 04fad1ddbabdb7f42c209581676e925e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scraper
   - hash:
       serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
@@ -1079,13 +1085,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 04fad1ddbabdb7f42c209581676e925e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Scraper
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
-  playerPath: /Users/matthias/Desktop/build.apk
+  playerPath: /Users/matthias/Desktop/20210429_app.apk

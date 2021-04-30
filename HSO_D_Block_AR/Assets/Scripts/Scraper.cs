@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine.UI;
+using System;
 
 public class Scraper : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public class Scraper : MonoBehaviour
 
     void Start()
     {
+        // TODO: Get date and time, important for chosing the right position in time table
         StartCoroutine(GetText());
         // findCourseLink(read_string, "3B8D64DB-2846-48D0-AB9E-782225E7B613"); // z.B. MuK1-3a
         // findCourseLink(read_string, "MuK1-3a"); // z.B. MuK1-3a
