@@ -1088,4 +1088,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
-  playerPath: /Users/matthias/Desktop/20210429_app.apk
+  playerPath: /Users/matthias/Desktop/build.apk

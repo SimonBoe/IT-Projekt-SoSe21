@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637553059200000000
+      ticks: 637553764690000000
     m_Hash: 2620370472
   m_LockFileStatus:
     m_FilePath: /Users/matthias/Documents/GitHub/IT-Projekt-SoSe21/HSO_D_Block_AR/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637553059200000000
+      ticks: 637553764690000000
     m_Hash: 2668334345
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
