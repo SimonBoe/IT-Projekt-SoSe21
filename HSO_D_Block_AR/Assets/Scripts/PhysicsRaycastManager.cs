@@ -30,6 +30,7 @@ public class PhysicsRaycastManager : MonoBehaviour
 
             touchPosition = touch.position;
 
+            // TODO: seperate touch phase from raycast. set material depending on raycast. ui panel setcative = true
             if (touch.phase == TouchPhase.Began)
             {
                 Ray ray = arCamera.ScreenPointToRay(touch.position);
