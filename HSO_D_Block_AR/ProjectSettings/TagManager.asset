@@ -6,6 +6,8 @@ TagManager:
   tags:
   - objectToSpawn
   - visualIndicator
+  - ARSessionOrigin
+  - ARSession
   layers:
   - Default
   - TransparentFX
