@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-
     // in editor select the prefab which is instatiated by tapping the screen
     [SerializeField]
     private GameObject objectToSpawn;
+
+    private GameObject spawnedObject;
 
     private PlacementIndicator placementIndicator;
     private PhysicsRaycastManager PhysicsRaycastManager;
@@ -19,6 +20,17 @@ public class ObjectSpawner : MonoBehaviour
         PhysicsRaycastManager = FindObjectOfType<PhysicsRaycastManager>();
         PhysicsRaycastManager.gameObject.SetActive(false);
 
+        // Get a reference to the UIManager and subscribe to OnClicked event
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        uiManager.OnClicked += UiManager_OnClicked;
+    }
+
+    private void UiManager_OnClicked()
+    {
+        if (spawnedObject)
+        {
+            Destroy(spawnedObject);
+        }
     }
 
     // Update is called once per frame
@@ -27,11 +39,12 @@ public class ObjectSpawner : MonoBehaviour
         // check touches
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            //instantiate object, if instance of object already exists, destroy object before instantiate new object
+            // TODO: maybe have an event that controls the visibility of the visual indicator
 
+            //instantiate object, if instance of object already exists, destroy object before instantiate new object
             if (!GameObject.FindGameObjectWithTag("objectToSpawn"))
             {
-                GameObject spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
+                spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
                 PhysicsRaycastManager.gameObject.SetActive(true);
             }

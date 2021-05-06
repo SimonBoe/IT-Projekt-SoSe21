@@ -14,14 +14,24 @@ public class PlacementIndicator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         // get components
         rayManager = FindObjectOfType<ARRaycastManager>();
-        visualIndicator = transform.GetChild(0).gameObject;
+        visualIndicator = GameObject.FindGameObjectWithTag("visualIndicator");
 
-        // hide the visual indicator
-        //visualIndicator.SetActive(false);
+        // show the visual indicator
         visualIndicator.SetActive(true);
+
+        // Get a reference to the UIManager and subscribe to OnClicked event
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        uiManager.OnClicked += UiManager_OnClicked;
+    }
+
+    private void UiManager_OnClicked()
+    {
+        if (!visualIndicator.activeInHierarchy)
+        {
+            visualIndicator.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -37,17 +47,6 @@ public class PlacementIndicator : MonoBehaviour
         {
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
-
-
-            /*if (!visualIndicator.activeInHierarchy)
-                visualIndicator.SetActive(true);*/
         }
-    }
-
-    public void resetAR()
-    {
-        if (!visualIndicator.activeInHierarchy)
-            visualIndicator.SetActive(true);
-        Destroy(GameObject.FindGameObjectWithTag("objectToSpawn"));
     }
 }
