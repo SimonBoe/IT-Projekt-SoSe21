@@ -25,7 +25,7 @@ public class RayBeam : MonoBehaviour
 
     void beamRay()
     {
-        origin = GameObject.FindGameObjectWithTag("MainCamera").transform.position + new Vector3(0f, -0.5f, 0f);
+        origin = GameObject.FindGameObjectWithTag("MainCamera").transform.position + new Vector3(0f, -0.5f, -0.5f);
         endPoint = origin + GameObject.FindGameObjectWithTag("MainCamera").transform.forward * 40f;
         //endPoint = new Vector3(5, 5, 5);
 
