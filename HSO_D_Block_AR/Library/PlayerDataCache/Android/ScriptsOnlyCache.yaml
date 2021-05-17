@@ -44,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/HSO_D_Block_AR.unity:
@@ -78,55 +79,57 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
-    - Class: 114
       Script: {instanceID: 1576}
     - Class: 114
       Script: {instanceID: 1578}
     - Class: 114
       Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 2186}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2180}
     - Class: 114
-      Script: {instanceID: 2378}
+      Script: {instanceID: 2284}
     - Class: 114
-      Script: {instanceID: 2462}
+      Script: {instanceID: 2292}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2372}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2560}
     - Class: 114
-      Script: {instanceID: 3018}
+      Script: {instanceID: 2658}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 3184}
+      Script: {instanceID: 3012}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3546}
+      Script: {instanceID: 3178}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3316}
     - Class: 114
-      Script: {instanceID: 3724}
+      Script: {instanceID: 3540}
     - Class: 114
-      Script: {instanceID: 3832}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 3876}
+      Script: {instanceID: 3718}
     - Class: 114
-      Script: {instanceID: 4094}
+      Script: {instanceID: 3826}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 3870}
     - Class: 114
-      Script: {instanceID: 4418}
+      Script: {instanceID: 4088}
+    - Class: 114
+      Script: {instanceID: 4320}
+    - Class: 114
+      Script: {instanceID: 4412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1018,7 +1021,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 05f2b73778988f23a2402a86cc605693
+      Hash: c6f414416aec10f0d134bc3e423c8012
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PhysicsRaycastManager
@@ -1097,4 +1100,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
-  playerPath: /Users/ucalren/Desktop/IT Projekt/_builds/20210506_app.apk
+  playerPath: /Users/matthias/Desktop/build.apk

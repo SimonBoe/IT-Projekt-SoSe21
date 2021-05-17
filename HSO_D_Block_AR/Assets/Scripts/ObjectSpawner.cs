@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class ObjectSpawner : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class ObjectSpawner : MonoBehaviour
     private GameObject objectToSpawn;
 
     private GameObject spawnedObject;
+
+    private ARSessionOrigin sessionOrigin;
 
     private PlacementIndicator placementIndicator;
     private PhysicsRaycastManager PhysicsRaycastManager;
@@ -23,6 +27,8 @@ public class ObjectSpawner : MonoBehaviour
         // Get a reference to the UIManager and subscribe to OnClicked event
         UIManager uiManager = FindObjectOfType<UIManager>();
         uiManager.OnClicked += UiManager_OnClicked;
+
+        sessionOrigin = FindObjectOfType<ARSessionOrigin>();
     }
 
     private void UiManager_OnClicked()
@@ -44,9 +50,14 @@ public class ObjectSpawner : MonoBehaviour
             //instantiate object, if instance of object already exists, destroy object before instantiate new object
             if (!GameObject.FindGameObjectWithTag("objectToSpawn"))
             {
-                spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
+
+                spawnedObject = Instantiate(objectToSpawn);
+                sessionOrigin.MakeContentAppearAt(spawnedObject.transform, placementIndicator.transform.position);
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
                 PhysicsRaycastManager.gameObject.SetActive(true);
+                //spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
+                //GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
+                //PhysicsRaycastManager.gameObject.SetActive(true);
             }
             else
             {

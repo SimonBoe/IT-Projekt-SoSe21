@@ -9,40 +9,77 @@ public class PhysicsRaycastManager : MonoBehaviour
     private Camera arCamera;
 
     [SerializeField]
-    private GameObject targetObjects;
+    private GameObject overlay;
 
-    private Color activeColor = Color.red;
+    [SerializeField]
+    private GameObject[] targetObjects;
 
-    private Color inactiveColor = Color.green;
+    [SerializeField]
+    private Material highlightMaterial;
 
-    private Vector2 touchPosition = default;
+    Material originalMaterial;
+    GameObject lastHighlightedObject;
 
 	private void Awake()
 	{
-        activeColor.a = 0.1f;
+        
 	}
+
+    void HighlightMaterial(GameObject gameObject)
+    {
+        if (lastHighlightedObject != gameObject)
+        {
+            ClearHighlighted();
+            originalMaterial = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+            gameObject.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
+            lastHighlightedObject = gameObject;
+        }
+    }
+
+    void ClearHighlighted()
+    {
+        if (lastHighlightedObject != null)
+        {
+            lastHighlightedObject.GetComponent<MeshRenderer>().sharedMaterial = originalMaterial;
+            lastHighlightedObject = null;
+        }
+    }
 
 	void FixedUpdate()
     {
-        if (Input.touchCount > 0)
+        Ray ray = arCamera.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
+        RaycastHit hitObject;
+        // TODO: test different distances (third param)
+        if (Physics.Raycast(ray, out hitObject, 0.5f))
         {
-            Touch touch = Input.GetTouch(0);
+            HighlightMaterial(hitObject.collider.gameObject);
 
-            touchPosition = touch.position;
-
-            // TODO: seperate touch phase from raycast. set material depending on raycast. ui panel setcative = true
-            if (touch.phase == TouchPhase.Began)
+            if (Input.touchCount > 0)
             {
-                Ray ray = arCamera.ScreenPointToRay(touch.position);
-                RaycastHit hitObject;
-                if (Physics.Raycast(ray, out hitObject))
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began)
                 {
-                    targetObjects.GetComponent<Renderer>().material.color = activeColor;
-                    Debug.Log("Hit");
-                } else {
-                    targetObjects.GetComponent<Renderer>().material.color = inactiveColor;
+                    Ray onObject = arCamera.ScreenPointToRay(touch.position);
+                    RaycastHit hit;
+                    //if (hitObject.collider.bounds.IntersectRay(onObject))
+                    if (Physics.Raycast(onObject, out hit) && hit.collider.name.Equals(hitObject.collider.name))
+                    {
+                        overlay.SetActive(true);
+                        this.gameObject.SetActive(false);
+                    }
                 }
             }
         }
+        else
+        {
+            ClearHighlighted();
+        }
+  
+    }
+
+    public void DeactivateOverlay()
+    {
+        overlay.SetActive(false);
+        this.gameObject.SetActive(true);
     }
 }
