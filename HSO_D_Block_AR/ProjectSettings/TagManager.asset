@@ -8,6 +8,8 @@ TagManager:
   - visualIndicator
   - ARSessionOrigin
   - ARSession
+  - GazePointer
+  - Crosshair
   layers:
   - Default
   - TransparentFX
