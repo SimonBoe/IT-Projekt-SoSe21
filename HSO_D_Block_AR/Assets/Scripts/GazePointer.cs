@@ -8,9 +8,11 @@ public class GazePointer : MonoBehaviour
     public GameObject crosshair;
     [SerializeField]
     private Image gazeImage;
+    [HideInInspector]
     public bool startFillingGaze;
-    public float time = 1f;
-
+    [HideInInspector]
+    public bool fillingCompleted = false;
+    private float time = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,6 @@ public class GazePointer : MonoBehaviour
         deactivateCrosshair();
         gazeImage.fillAmount = 0;
         startFillingGaze = false;
-            
     }
 
     // Update is called once per frame
@@ -30,12 +31,18 @@ public class GazePointer : MonoBehaviour
         } else 
         {
             gazeImage.fillAmount = 0;
+            fillingCompleted = false;
         }
     }
 
     public void fillGaze()
     {
-        gazeImage.fillAmount += 1.0f / time * Time.deltaTime;
+        if (gazeImage.fillAmount == 1.0f) {
+            startFillingGaze = false;
+            fillingCompleted = true;
+        } else {
+            gazeImage.fillAmount += 1.0f / time * Time.deltaTime;
+        }
     }
 
     public void activateCrosshair()

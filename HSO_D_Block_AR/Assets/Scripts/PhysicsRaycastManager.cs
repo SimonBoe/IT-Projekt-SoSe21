@@ -59,21 +59,26 @@ public class PhysicsRaycastManager : MonoBehaviour
             //Start filling gazeImage
             gazePointer.startFillingGaze = true;
 
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    Ray onObject = arCamera.ScreenPointToRay(touch.position);
-                    RaycastHit hit;
-                    //if (hitObject.collider.bounds.IntersectRay(onObject))
-                    if (Physics.Raycast(onObject, out hit) && hit.collider.name.Equals(hitObject.collider.name))
-                    {
-                        overlay.SetActive(true);
-                        this.gameObject.SetActive(false);
-                    }
-                }
+            if (gazePointer.fillingCompleted) {
+                overlay.SetActive(true);
+                this.gameObject.SetActive(false);
             }
+
+            // if (Input.touchCount > 0)
+            // {
+            //     Touch touch = Input.GetTouch(0);
+            //     if (touch.phase == TouchPhase.Began)
+            //     {
+            //         Ray onObject = arCamera.ScreenPointToRay(touch.position);
+            //         RaycastHit hit;
+            //         //if (hitObject.collider.bounds.IntersectRay(onObject))
+            //         if (Physics.Raycast(onObject, out hit) && hit.collider.name.Equals(hitObject.collider.name))
+            //         {
+            //             overlay.SetActive(true);
+            //             this.gameObject.SetActive(false);
+            //         }
+            //     }
+            // }
         }
         else
         {

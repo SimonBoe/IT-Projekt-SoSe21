@@ -13,12 +13,6 @@ ScriptsOnlyBuild:
     - Lean.Touch.LeanPinchScale
     - Lean.Touch.LeanTouch
     - Lean.Touch.LeanTwistRotateAxis
-    Unity.Recorder.Editor.dll:
-    - UnityEditor.Recorder.ImageRecorderEditor
-    - UnityEditor.Recorder.ImageRecorderSettings
-    - UnityEditor.Recorder.RecorderControllerSettings
-    - UnityEditor.Recorder.RecorderSettingsPrefsEditor
-    - UnityEditor.Recorder.RecorderWindow
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -135,141 +129,141 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1594}
+      Script: {instanceID: 1622}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1624}
     - Class: 114
-      Script: {instanceID: 1598}
+      Script: {instanceID: 1626}
     - Class: 114
-      Script: {instanceID: 1600}
+      Script: {instanceID: 1628}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1630}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1716}
+      Script: {instanceID: 1754}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 1908}
+      Script: {instanceID: 1956}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 2292}
     - Class: 114
-      Script: {instanceID: 2240}
+      Script: {instanceID: 2296}
     - Class: 114
-      Script: {instanceID: 2248}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2384}
     - Class: 114
-      Script: {instanceID: 2512}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3058}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3402}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 3538}
+      Script: {instanceID: 3638}
     - Class: 114
-      Script: {instanceID: 3562}
+      Script: {instanceID: 3662}
     - Class: 114
-      Script: {instanceID: 3652}
+      Script: {instanceID: 3758}
     - Class: 114
-      Script: {instanceID: 3658}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 3674}
+      Script: {instanceID: 3782}
     - Class: 114
-      Script: {instanceID: 3708}
+      Script: {instanceID: 3816}
     - Class: 114
-      Script: {instanceID: 3864}
+      Script: {instanceID: 3986}
     - Class: 114
-      Script: {instanceID: 3924}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 4200}
     - Class: 114
-      Script: {instanceID: 4470}
+      Script: {instanceID: 4620}
     - Class: 114
-      Script: {instanceID: 4630}
+      Script: {instanceID: 4780}
     - Class: 114
-      Script: {instanceID: 4642}
+      Script: {instanceID: 4792}
     - Class: 114
-      Script: {instanceID: 4694}
+      Script: {instanceID: 4848}
     - Class: 114
-      Script: {instanceID: 4852}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 5012}
     - Class: 114
-      Script: {instanceID: 4870}
+      Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 4944}
+      Script: {instanceID: 5108}
     - Class: 114
-      Script: {instanceID: 5090}
+      Script: {instanceID: 5262}
     - Class: 114
-      Script: {instanceID: 5110}
-    - Class: 114
-      Script: {instanceID: 5188}
-    - Class: 114
-      Script: {instanceID: 5208}
-    - Class: 114
-      Script: {instanceID: 5304}
+      Script: {instanceID: 5282}
     - Class: 114
       Script: {instanceID: 5362}
     - Class: 114
-      Script: {instanceID: 5368}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 5374}
+      Script: {instanceID: 5488}
     - Class: 114
-      Script: {instanceID: 5450}
+      Script: {instanceID: 5550}
     - Class: 114
-      Script: {instanceID: 5482}
+      Script: {instanceID: 5558}
     - Class: 114
-      Script: {instanceID: 5492}
+      Script: {instanceID: 5564}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 5592}
+      Script: {instanceID: 5678}
     - Class: 114
-      Script: {instanceID: 5692}
+      Script: {instanceID: 5688}
     - Class: 114
-      Script: {instanceID: 5806}
+      Script: {instanceID: 5722}
     - Class: 114
-      Script: {instanceID: 5840}
+      Script: {instanceID: 5802}
     - Class: 114
       Script: {instanceID: 5910}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 6026}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 6318}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6432}
+      Script: {instanceID: 6180}
     - Class: 114
-      Script: {instanceID: 6474}
+      Script: {instanceID: 6196}
     - Class: 114
-      Script: {instanceID: 6730}
+      Script: {instanceID: 6574}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6692}
     - Class: 114
-      Script: {instanceID: 6912}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 6936}
+      Script: {instanceID: 7010}
+    - Class: 114
+      Script: {instanceID: 7134}
+    - Class: 114
+      Script: {instanceID: 7200}
+    - Class: 114
+      Script: {instanceID: 7224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -603,6 +597,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: AREnvironmentProbeManager
+  - hash:
+      serializedVersion: 2
+      Hash: 49101319b21043357cb80c5aba043e1d
+    assemblyName: Unity.Recorder.dll
+    namespaceName: UnityEngine.Recorder
+    className: RecorderBindings
   - hash:
       serializedVersion: 2
       Hash: de8c2a257a183731115d08b34b7bd746
@@ -1487,7 +1487,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 7f803521d54c26ecd3fa86b6631f8f5e
+      Hash: 50120e1c2dd00d3a6231f34632cd7a46
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GazePointer
@@ -1653,13 +1653,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 49101319b21043357cb80c5aba043e1d
-    assemblyName: Unity.Recorder.dll
-    namespaceName: UnityEngine.Recorder
-    className: RecorderBindings
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
-  playerPath: /Users/ucalren/Desktop/IT Projekt/_builds/20210525_app.apk
+  playerPath: /Users/matthias/Desktop/build.apk
