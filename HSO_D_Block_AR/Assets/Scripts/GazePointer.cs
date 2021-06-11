@@ -9,7 +9,7 @@ public class GazePointer : MonoBehaviour
     [SerializeField]
     private Image gazeImage;
     [HideInInspector]
-    public bool startFillingGaze;
+    public bool IsFilling;
     [HideInInspector]
     public bool fillingCompleted = false;
     private float time = 2f;
@@ -19,30 +19,32 @@ public class GazePointer : MonoBehaviour
     {
         deactivateCrosshair();
         gazeImage.fillAmount = 0;
-        startFillingGaze = false;
+        IsFilling = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startFillingGaze)
+        if (IsFilling)
         {
             fillGaze();
-        } else 
-        {
-            gazeImage.fillAmount = 0;
-            fillingCompleted = false;
-        }
+        } 
     }
 
     public void fillGaze()
     {
         if (gazeImage.fillAmount == 1.0f) {
-            startFillingGaze = false;
+            IsFilling = false;
             fillingCompleted = true;
         } else {
             gazeImage.fillAmount += 1.0f / time * Time.deltaTime;
         }
+    }
+
+    public void reset() {
+        gazeImage.fillAmount = 0;
+        IsFilling = false;
+        fillingCompleted = false;
     }
 
     public void activateCrosshair()
