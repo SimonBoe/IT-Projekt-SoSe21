@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 7945525513894522942}
   m_Layer: 8
   m_Name: Walls_Second_Floor
-  m_TagString: Untagged
+  m_TagString: SecondFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 5987966441762500280}
   m_Layer: 10
   m_Name: AV_Wall_Ground_Floor
-  m_TagString: Untagged
+  m_TagString: AVGroundFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4790,7 +4790,7 @@ GameObject:
   - component: {fileID: 1353022460980676940}
   m_Layer: 6
   m_Name: Walls_Ground_Floor
-  m_TagString: Untagged
+  m_TagString: GroundFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14155,7 +14155,7 @@ GameObject:
   - component: {fileID: 3794674274425532757}
   m_Layer: 9
   m_Name: Walls_Top_Floor
-  m_TagString: Untagged
+  m_TagString: TopFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21140,7 +21140,7 @@ GameObject:
   - component: {fileID: 7346815730917035034}
   m_Layer: 11
   m_Name: polySurface156
-  m_TagString: Untagged
+  m_TagString: AVFirstFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24646,7 +24646,7 @@ GameObject:
   - component: {fileID: 2017814651378485050}
   m_Layer: 7
   m_Name: Walls_First_Floor
-  m_TagString: Untagged
+  m_TagString: FirstFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

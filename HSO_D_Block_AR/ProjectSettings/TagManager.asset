@@ -10,6 +10,12 @@ TagManager:
   - ARSession
   - GazePointer
   - Crosshair
+  - TopFloor
+  - SecondFloor
+  - FirstFloor
+  - GroundFloor
+  - AVGroundFloor
+  - AVFirstFloor
   layers:
   - Default
   - TransparentFX

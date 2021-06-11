@@ -43,6 +43,11 @@ public class PhysicsRaycastManager : MonoBehaviour
 
     private GazePointer gazePointer;
 
+    private GameObject oldRayHit = default;
+    private GameObject newRayHit = default;
+
+    GameObject toShow = default;
+
 	private void Awake()
 	{
         gazePointer = GameObject.FindGameObjectWithTag("GazePointer").GetComponent<GazePointer>();
@@ -63,6 +68,7 @@ public class PhysicsRaycastManager : MonoBehaviour
     {
         if (lastHighlightedObject != null)
         {
+            gazePointer.startFillingGaze = false;
             lastHighlightedObject.GetComponent<MeshRenderer>().sharedMaterial = originalMaterial;
             lastHighlightedObject = null;
         }
@@ -72,24 +78,55 @@ public class PhysicsRaycastManager : MonoBehaviour
     {
         Ray ray = arCamera.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
 
-        int groundFloor = LayerMask.GetMask("groundFloor");
-        int firstFloor = LayerMask.GetMask("firstFloor");
-        int secondFloor = LayerMask.GetMask("secondFloor");
-        int topFloor = LayerMask.GetMask("topFloor");
-        int avGroundFloor = LayerMask.GetMask("avGroundFloor");
-        int avFirstFloor = LayerMask.GetMask("avFirstFloor");
+        // int groundFloor = LayerMask.GetMask("groundFloor");
+        // int firstFloor = LayerMask.GetMask("firstFloor");
+        // int secondFloor = LayerMask.GetMask("secondFloor");
+        // int topFloor = LayerMask.GetMask("topFloor");
+        // int avGroundFloor = LayerMask.GetMask("avGroundFloor");
+        // int avFirstFloor = LayerMask.GetMask("avFirstFloor");
 
         RaycastHit hitObject;
         // TODO: test different distances (third param)
-        if (Physics.Raycast(ray, out hitObject, 1.5f, groundFloor))
+        if (Physics.Raycast(ray, out hitObject, 1.5f))
         {
             HighlightMaterial(hitObject.collider.gameObject);
 
             //Start filling gazeImage
             gazePointer.startFillingGaze = true;
 
+            switch (hitObject.collider.gameObject.tag)
+            {
+                case "GroundFloor":
+                    toShow = overlayGroundFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                case "FirstFloor":
+                    toShow = overlayFirstFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                case "SecondFloor":
+                    toShow = overlaySecondFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                case "TopFloor":
+                    toShow = overlayTopFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                case "AVGroundFloor":
+                    toShow = overlayAVGroundFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                case "AVFirstFloor":
+                    toShow = overlayAVFirstFloor;
+                    //gazePointer.startFillingGaze = true;
+                    break;
+                default:
+                    break;
+            }
+
             if (gazePointer.fillingCompleted) {
-                overlayGroundFloor.SetActive(true);
+                // overlayGroundFloor.SetActive(true);
+                toShow.SetActive(true);
                 resetButton.SetActive(false);
                 crossHairVisual.SetActive(false);
                 this.gameObject.SetActive(false);
@@ -110,86 +147,119 @@ public class PhysicsRaycastManager : MonoBehaviour
             //         }
             //     }
             // }
-        } else if (Physics.Raycast(ray, out hitObject, 1.5f, firstFloor))
-            {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayFirstFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, secondFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlaySecondFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, topFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayTopFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, avGroundFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayAVGroundFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, avFirstFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayAVFirstFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
+        } 
         else
         {
             ClearHighlighted();
             gazePointer.startFillingGaze = false;
         }
+
+
+        oldRayHit = newRayHit;
+        // if (Physics.Raycast(ray, out hitObject, 1.5f, firstFloor))
+        //     {
+        //     HighlightMaterial(hitObject.collider.gameObject);
+
+        //     //Start filling gazeImage
+        //     gazePointer.startFillingGaze = true;
+
+        //     if (gazePointer.fillingCompleted)
+        //     {
+        //         overlayFirstFloor.SetActive(true);
+        //         resetButton.SetActive(false);
+        //         crossHairVisual.SetActive(false);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     ClearHighlighted();
+        //     gazePointer.startFillingGaze = false;
+        // }
+
+        // if (Physics.Raycast(ray, out hitObject, 1.5f, secondFloor))
+        // {
+        //     HighlightMaterial(hitObject.collider.gameObject);
+
+        //     //Start filling gazeImage
+        //     gazePointer.startFillingGaze = true;
+
+        //     if (gazePointer.fillingCompleted)
+        //     {
+        //         overlaySecondFloor.SetActive(true);
+        //         resetButton.SetActive(false);
+        //         crossHairVisual.SetActive(false);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     ClearHighlighted();
+        //     gazePointer.startFillingGaze = false;
+        // }
+
+        // if (Physics.Raycast(ray, out hitObject, 1.5f, topFloor))
+        // {
+        //     HighlightMaterial(hitObject.collider.gameObject);
+
+        //     //Start filling gazeImage
+        //     gazePointer.startFillingGaze = true;
+
+        //     if (gazePointer.fillingCompleted)
+        //     {
+        //         overlayTopFloor.SetActive(true);
+        //         resetButton.SetActive(false);
+        //         crossHairVisual.SetActive(false);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     ClearHighlighted();
+        //     gazePointer.startFillingGaze = false;
+        // }
+
+        // if (Physics.Raycast(ray, out hitObject, 1.5f, avGroundFloor))
+        // {
+        //     HighlightMaterial(hitObject.collider.gameObject);
+
+        //     //Start filling gazeImage
+        //     gazePointer.startFillingGaze = true;
+
+        //     if (gazePointer.fillingCompleted)
+        //     {
+        //         overlayAVGroundFloor.SetActive(true);
+        //         resetButton.SetActive(false);
+        //         crossHairVisual.SetActive(false);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     ClearHighlighted();
+        //     gazePointer.startFillingGaze = false;
+        // }
+
+        // if (Physics.Raycast(ray, out hitObject, 1.5f, avFirstFloor))
+        // {
+        //     HighlightMaterial(hitObject.collider.gameObject);
+
+        //     //Start filling gazeImage
+        //     gazePointer.startFillingGaze = true;
+
+        //     if (gazePointer.fillingCompleted)
+        //     {
+        //         overlayAVFirstFloor.SetActive(true);
+        //         resetButton.SetActive(false);
+        //         crossHairVisual.SetActive(false);
+        //         this.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     ClearHighlighted();
+        //     gazePointer.startFillingGaze = false;
+        // }
   
     }
 
