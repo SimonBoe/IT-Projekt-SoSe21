@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GazePointer gazePointer;
+    GazePointer gazePointer;
 
 	private void Start()
 	{

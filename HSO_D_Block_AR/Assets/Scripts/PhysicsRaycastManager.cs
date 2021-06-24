@@ -43,6 +43,8 @@ public class PhysicsRaycastManager : MonoBehaviour
 
     private GazePointer gazePointer;
 
+    GameObject toShow = default;
+
 	private void Awake()
 	{
         gazePointer = GameObject.FindGameObjectWithTag("GazePointer").GetComponent<GazePointer>();
@@ -52,6 +54,7 @@ public class PhysicsRaycastManager : MonoBehaviour
     {
         if (lastHighlightedObject != gameObject)
         {
+            gazePointer.reset();
             ClearHighlighted();
             originalMaterial = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
             gameObject.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
@@ -72,125 +75,52 @@ public class PhysicsRaycastManager : MonoBehaviour
     {
         Ray ray = arCamera.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
 
-        int groundFloor = LayerMask.GetMask("groundFloor");
-        int firstFloor = LayerMask.GetMask("firstFloor");
-        int secondFloor = LayerMask.GetMask("secondFloor");
-        int topFloor = LayerMask.GetMask("topFloor");
-        int avGroundFloor = LayerMask.GetMask("avGroundFloor");
-        int avFirstFloor = LayerMask.GetMask("avFirstFloor");
-
         RaycastHit hitObject;
         // TODO: test different distances (third param)
-        if (Physics.Raycast(ray, out hitObject, 1.5f, groundFloor))
+        if (Physics.Raycast(ray, out hitObject, 1.5f))
         {
             HighlightMaterial(hitObject.collider.gameObject);
 
             //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
+            gazePointer.IsFilling = true;
+
+            switch (hitObject.collider.gameObject.tag)
+            {
+                case "GroundFloor":
+                    toShow = overlayGroundFloor;
+                    break;
+                case "FirstFloor":
+                    toShow = overlayFirstFloor;
+                    break;
+                case "SecondFloor":
+                    toShow = overlaySecondFloor;
+                    break;
+                case "TopFloor":
+                    toShow = overlayTopFloor;
+                    break;
+                case "AVGroundFloor":
+                    toShow = overlayAVGroundFloor;
+                    break;
+                case "AVFirstFloor":
+                    toShow = overlayAVFirstFloor;
+                    break;
+                default:
+                    break;
+            }
 
             if (gazePointer.fillingCompleted) {
-                overlayGroundFloor.SetActive(true);
+                // overlayGroundFloor.SetActive(true);
+                toShow.SetActive(true);
                 resetButton.SetActive(false);
                 crossHairVisual.SetActive(false);
                 this.gameObject.SetActive(false);
             }
-
-            // if (Input.touchCount > 0)
-            // {
-            //     Touch touch = Input.GetTouch(0);
-            //     if (touch.phase == TouchPhase.Began)
-            //     {
-            //         Ray onObject = arCamera.ScreenPointToRay(touch.position);
-            //         RaycastHit hit;
-            //         //if (hitObject.collider.bounds.IntersectRay(onObject))
-            //         if (Physics.Raycast(onObject, out hit) && hit.collider.name.Equals(hitObject.collider.name))
-            //         {
-            //             overlay.SetActive(true);
-            //             this.gameObject.SetActive(false);
-            //         }
-            //     }
-            // }
-        } else if (Physics.Raycast(ray, out hitObject, 1.5f, firstFloor))
-            {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayFirstFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, secondFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlaySecondFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, topFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayTopFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, avGroundFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayAVGroundFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
-        else if (Physics.Raycast(ray, out hitObject, 1.5f, avFirstFloor))
-        {
-            HighlightMaterial(hitObject.collider.gameObject);
-
-            //Start filling gazeImage
-            gazePointer.startFillingGaze = true;
-
-            if (gazePointer.fillingCompleted)
-            {
-                overlayAVFirstFloor.SetActive(true);
-                resetButton.SetActive(false);
-                crossHairVisual.SetActive(false);
-                this.gameObject.SetActive(false);
-            }
-        }
+        } 
         else
         {
             ClearHighlighted();
-            gazePointer.startFillingGaze = false;
+            gazePointer.reset();
         }
-  
     }
 
     public void DeactivateOverlay()
@@ -204,5 +134,6 @@ public class PhysicsRaycastManager : MonoBehaviour
         resetButton.SetActive(true);
         crossHairVisual.SetActive(true);
         this.gameObject.SetActive(true);
+        gazePointer.reset();
     }
 }
