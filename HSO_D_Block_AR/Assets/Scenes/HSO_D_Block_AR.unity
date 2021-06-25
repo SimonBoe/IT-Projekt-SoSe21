@@ -11024,7 +11024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7f2f0cc072b4394bcc20f8e83aa484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gazePointer: {fileID: 0}
 --- !u!1 &1406060844
 GameObject:
   m_ObjectHideFlags: 0
@@ -15042,7 +15041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crosshair: {fileID: 532867716}
   gazeImage: {fileID: 640217350}
-  startFillingGaze: 0
+  IsFilling: 0
   fillingCompleted: 0
 --- !u!1 &1816380501
 GameObject:
