@@ -9,7 +9,7 @@ public class Scraper : MonoBehaviour
 {
     // Create public dictionary with room info
     public Dictionary<string, List<RoomInformation>> roomInfoDict;
-    public Scraper Instance;
+    public static Scraper Instance;
 
     void Start()
     {
