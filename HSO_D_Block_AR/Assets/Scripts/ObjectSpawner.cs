@@ -54,7 +54,6 @@ public class ObjectSpawner : MonoBehaviour
             //instantiate object, if instance of object already exists, destroy object before instantiate new object
             if (!GameObject.FindGameObjectWithTag("objectToSpawn"))
             {
-
                 spawnedObject = Instantiate(objectToSpawn);
                 sessionOrigin.MakeContentAppearAt(spawnedObject.transform, placementIndicator.transform.position);
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - FetchRoomInfo
     - GazePointer
     - LightEstimation
     - ObjectSpawner
@@ -70,8 +71,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARRaycastManager
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
-    Unity.XR.ARKit.Editor.dll:
-    - UnityEditor.XR.ARKit.ARKitSettings
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -131,141 +130,143 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9092}
+      Script: {instanceID: 1626}
     - Class: 114
-      Script: {instanceID: 9134}
+      Script: {instanceID: 1628}
     - Class: 114
-      Script: {instanceID: 9208}
+      Script: {instanceID: 1630}
     - Class: 114
-      Script: {instanceID: 9236}
+      Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 9404}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 9738}
+      Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 9742}
+      Script: {instanceID: 1756}
     - Class: 114
-      Script: {instanceID: 9752}
+      Script: {instanceID: 1784}
     - Class: 114
-      Script: {instanceID: 9830}
+      Script: {instanceID: 1958}
     - Class: 114
-      Script: {instanceID: 10020}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 10184}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 10440}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 10510}
+      Script: {instanceID: 2386}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 10634}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 10842}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 10878}
+      Script: {instanceID: 3196}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 3298}
     - Class: 114
-      Script: {instanceID: 10922}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 3642}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 3666}
     - Class: 114
-      Script: {instanceID: 11244}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 3768}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 3786}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 3820}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 4054}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 4204}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 4624}
     - Class: 114
-      Script: {instanceID: 12264}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 4796}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 4852}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 5014}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 5016}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 12676}
+      Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 12696}
+      Script: {instanceID: 5268}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 5288}
     - Class: 114
-      Script: {instanceID: 12796}
+      Script: {instanceID: 5368}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 5388}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 5494}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 5556}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 5564}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 5570}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 5646}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 5684}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 5694}
     - Class: 114
-      Script: {instanceID: 13204}
+      Script: {instanceID: 5728}
     - Class: 114
-      Script: {instanceID: 13214}
+      Script: {instanceID: 5808}
     - Class: 114
-      Script: {instanceID: 13320}
+      Script: {instanceID: 5916}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 6032}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 13548}
+      Script: {instanceID: 6146}
     - Class: 114
-      Script: {instanceID: 13588}
+      Script: {instanceID: 6186}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 6580}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 6698}
     - Class: 114
-      Script: {instanceID: 14140}
+      Script: {instanceID: 6740}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 7018}
     - Class: 114
-      Script: {instanceID: 14536}
+      Script: {instanceID: 7142}
     - Class: 114
-      Script: {instanceID: 14598}
+      Script: {instanceID: 7208}
     - Class: 114
-      Script: {instanceID: 14622}
+      Script: {instanceID: 7232}
+    - Class: 114
+      Script: {instanceID: 31260}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -289,6 +290,36 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
       Hash: f69dfc6409fbbd89d3689368e99688a8
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -299,12 +330,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPlane
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
@@ -533,12 +558,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: e637d5beedb3a6559aba9ccdfa511dd3
@@ -1045,12 +1064,6 @@ ScriptsOnlyBuild:
     className: Tonemapping
   - hash:
       serializedVersion: 2
-      Hash: bcaee4c2a83047257b5f47d6ed264b75
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: LeanTouch.dll
     namespaceName: Lean.Touch
@@ -1147,19 +1160,13 @@ ScriptsOnlyBuild:
     className: LeanFingerUpdate
   - hash:
       serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 1a0dd7ad4ca549693ba556455716f223
     assemblyName: LeanTouch.dll
     namespaceName: Lean.Touch
     className: LeanSelectByFinger
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 410a38f6fef98e81c29dd9c2a6cfbd49
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scraper
@@ -1295,12 +1302,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerBitField
-  - hash:
-      serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
@@ -1655,6 +1656,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FetchRoomInfo
   platform: 13
   scenePathNames:
   - Assets/Scenes/HSO_D_Block_AR.unity
