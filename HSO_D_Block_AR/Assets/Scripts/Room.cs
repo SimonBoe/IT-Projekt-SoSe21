@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour
 {
     [SerializeField]
+    private GameObject moreInfoBtnParent;
+    private Button moreInfoBtn;
+
+    [SerializeField]
     private string roomName;
     [SerializeField]
     private GameObject liveIndicator;
@@ -16,6 +20,8 @@ public class Room : MonoBehaviour
     // Store specific lesson info
     private List<string> lessonInfo = new List<string>();
     private int timeBlock = 0;
+
+    private string furtherInfo = default;
 
     // Start is called before the first frame update
     void Start()
@@ -70,5 +76,19 @@ public class Room : MonoBehaviour
         } else {
             infoBox.text = $"Event:\n{lessonInfo[0]}{lessonInfo[1].TrimEnd()}{lessonInfo[2].TrimEnd()}{lessonInfo[3].TrimEnd()}";
         }
+
+        if (InfoManager.MoreInfo.ContainsKey(roomName)) {
+            // show more info button and transfer link
+            moreInfoBtnParent.SetActive(true);
+            moreInfoBtn = moreInfoBtnParent.GetComponent<Button>();
+		    moreInfoBtn.onClick.AddListener(ShowMoreInfo);
+        } else {
+            moreInfoBtnParent.SetActive(false);
+        }
+    }
+
+    public void ShowMoreInfo() {
+        string url = InfoManager.MoreInfo[roomName];
+        Application.OpenURL(url);
     }
 }

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637605060950000000
-    m_Hash: 744804779
+      ticks: 637624950260000000
+    m_Hash: 877465548
   m_LockFileStatus:
     m_FilePath: /Users/matthias/Documents/GitHub/IT-Projekt-SoSe21/HSO_D_Block_AR/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637605091830000000
-    m_Hash: 130150480
+      ticks: 637624953700000000
+    m_Hash: 741992905
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -991,12 +991,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
         revision: 2fe55e5d14362cc4fdcc886f56dbfe518298e4a5
         path: 
-    - packageId: com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.20-preview
+    - packageId: com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.22-preview
       testable: 0
       isDirectDependency: 1
-      version: 0.1.20-preview
+      version: 0.1.22-preview
       source: 1
-      resolvedPath: /Users/matthias/Documents/GitHub/IT-Projekt-SoSe21/HSO_D_Block_AR/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.20-preview
+      resolvedPath: /Users/matthias/Documents/GitHub/IT-Projekt-SoSe21/HSO_D_Block_AR/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.22-preview
       assetPath: Packages/com.unity.toolchain.macos-x86_64-linux-x86_64
       name: com.unity.toolchain.macos-x86_64-linux-x86_64
       displayName: Toolchain MacOS Linux x64
@@ -1028,6 +1028,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 0.1.20-preview
         - 0.1.21-preview
+        - 0.1.22-preview
         compatible:
         - 0.1.4-preview
         - 0.1.5-preview
@@ -1045,6 +1046,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 0.1.20-preview
         - 0.1.21-preview
+        - 0.1.22-preview
         verified: 
       dependencies:
       - name: com.unity.sysroot
@@ -1074,13 +1076,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637497550130000000
+      datePublishedTicks: 637619741700000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.sysroot.git
-        revision: 8717ab9c5b4f758bc542184e1872ed3fcce1e1f9
+        revision: c23b9fb202dceb7b518aa7353d96a3e2eae227c5
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0

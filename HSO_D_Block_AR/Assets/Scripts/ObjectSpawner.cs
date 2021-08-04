@@ -49,8 +49,6 @@ public class ObjectSpawner : MonoBehaviour
         // check touches
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            // TODO: maybe have an event that controls the visibility of the visual indicator
-
             //instantiate object, if instance of object already exists, destroy object before instantiate new object
             if (!GameObject.FindGameObjectWithTag("objectToSpawn"))
             {
@@ -59,10 +57,6 @@ public class ObjectSpawner : MonoBehaviour
                 GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
                 PhysicsRaycastManager.gameObject.SetActive(true);
                 gazePointer.activateCrosshair();
-
-                //spawnedObject = Instantiate(objectToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
-                //GameObject.FindGameObjectWithTag("visualIndicator").SetActive(false);
-                //PhysicsRaycastManager.gameObject.SetActive(true);
             }
             else
             {
