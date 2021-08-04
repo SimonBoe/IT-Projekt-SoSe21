@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RoomInfo : MonoBehaviour
+public class InfoText : MonoBehaviour
 {
     private Text text;
 
